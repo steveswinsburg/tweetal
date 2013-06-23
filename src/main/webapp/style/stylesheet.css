@@ -1,0 +1,193 @@
+/**
+ * Copyright 2009-2011 The Australian National University
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+.disabled {
+            color: grey;
+            text-decoration:none;
+        }
+
+a {
+text-decoration:none;
+}
+
+.status-wrapper {
+	max-height:300px;
+	overflow-x:hidden;
+	font-size:90%;
+}
+
+.status {
+	border-top:1px dotted #E7E2E2;
+	display: block;
+	clear: both;
+	padding-bottom: 5px;
+	padding-top:5px;
+	
+}
+
+.status-image-wrap {
+	display:inline;
+	overflow:hidden;
+	/*border: 1px solid red;*/
+	float:left;
+	height:50px;
+	
+}
+.status-image {
+	max-width: 48px;
+	/* centre the image inside this div */
+	text-align:center;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+    /* alternatively,
+    display:block;
+    margin:auto;
+    */
+    /* end of centreing the image */	
+}
+
+.status-image img {
+	max-width: 48px;
+	width: expression(Math.min(parseInt(this.offsetWidth),48) + "px"); /* ie6 max-width hack */
+	background-color: transparent;
+	text-align:center;
+	overflow-x:hidden;
+} 
+
+/* wraps everything */
+.status-content-wrapper {
+	margin-left: 55px;
+	min-height:50px;
+}
+
+
+/* wraps status-body and status-timestamp */
+.status-body-wrapper {
+	clear:none;
+}
+
+.status-body {
+}
+
+.status-timestamp {
+	color:#999999;
+	display:block;
+	font-size:10px;
+}
+
+.status-text {
+	padding-left: 4px;
+}
+
+.status-tools {
+	float:right;
+	clear:none;
+	width: 25px;
+}
+
+.status-tools a{
+	display:block;
+	margin-top: 2px;
+}
+
+.update-wrapper{
+	border-top:1px dotted #E7E2E2;
+	display: block;
+	clear: both;
+	padding-bottom: 10px;
+	padding-top:10px;
+
+}
+
+
+.update-wrapper input {
+	width:96%;
+	font-size:140%;
+	display: block;
+	margin-left: 0px !important;
+	border-style:solid; border-color:#E7E2E7; border-width: 1px; background-color:transparent;
+}
+
+.update-wrapper .refresh-wrapper {
+	color:#999999;
+	display:block;
+	font-size:10px;
+	/*border: 1px solid blue;*/
+}
+
+.update-wrapper .status-word-count {
+	color:#999999;
+	display:inline;
+	overflow:hidden;
+	float:left;
+	width:80px;
+	font-size:20px;
+	/*border: 1px solid blue;*/
+}
+
+.highlight-mine{
+	background-color:#FAFAFF;
+}
+
+.highlight-selected-tweet {
+	background-color:#DBF0FF;
+}
+
+div.tweetal-config  {
+	padding: 10px;
+}
+
+.tweetal-config legend {
+	padding: 1em;
+} 
+
+
+.tweetal-config legend { 
+        font-size: 110%; 
+        color: black; 
+        font-style: italic;
+        margin-bottom: 0;
+}
+
+.tweetal-config label { 
+	width: 12em; 
+	float: left; 
+}
+
+.tweetal-config label.error { 
+	float: none; 
+	color: red; 
+	padding-left: .5em; 
+	vertical-align: top; 
+}
+
+.tweetal-config p { 
+	clear: both; 
+}
+
+.tweetal-config em { 
+	font-weight: bold; padding-right: 1em; vertical-align: top; 
+}
+
+
+<!--[if IE]>
+<style>
+.item {
+margin: 5px;
+padding: 10px;
+}
+</style>
+<![EndIf]-->

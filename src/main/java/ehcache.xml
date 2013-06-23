@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+	updateCheck="false" monitoring="autodetect" 
+	dynamicConfig="true">
+    
+    <diskStore path="java.io.tmpdir/tweetal" />
+
+    <defaultCache 
+    	eternal="false" 
+    	maxElementsInMemory="1000" 
+    	overflowToDisk="false" 
+    	diskPersistent="false" 
+        timeToIdleSeconds="0" 
+        timeToLiveSeconds="600" 
+        memoryStoreEvictionPolicy="LRU" 
+    />
+
+    <!-- 30 mins idle cache on tweetal authenticated object -->
+    <cache name="au.edu.anu.portal.portlets.tweetal.TweetalCache"
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="1800" 
+        timeToLiveSeconds="0" 
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LRU"/>
+
+    <!-- 30 mins idle cache on user's tweets -->
+    <cache name="au.edu.anu.portal.portlets.tweetal.TweetsCache"
+        maxElementsInMemory="1000"
+        eternal="false"
+        timeToIdleSeconds="1800" 
+        timeToLiveSeconds="0" 
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LRU"/>
+
+</ehcache>

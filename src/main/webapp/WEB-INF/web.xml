@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	 version="2.4">
+	 
+    <display-name>Tweetal</display-name>
+
+
+	<!-- TweetalServlet -->
+	 	<servlet>
+	        <servlet-name>tweetalServlet</servlet-name>
+	        <servlet-class>au.edu.anu.portal.portlets.tweetal.servlet.TweetalServlet</servlet-class>
+	    </servlet>
+	    
+	    <servlet-mapping>
+	        <servlet-name>tweetalServlet</servlet-name>
+	        <url-pattern>/tweetalServlet/*</url-pattern>
+	    </servlet-mapping>
+
+		<filter>
+		    <filter-name>gzipFilter</filter-name>
+		    <filter-class>net.sf.ehcache.constructs.web.filter.GzipFilter</filter-class>
+		</filter>
+		
+		<filter>
+		    <filter-name>CacheExpiresFilter</filter-name>
+		    <filter-class>org.jasig.resourceserver.utils.filter.PathBasedCacheExpirationFilter</filter-class>
+		</filter>
+		
+		<filter-mapping>
+		    <filter-name>gzipFilter</filter-name>
+		    <url-pattern>/images/*</url-pattern>
+		    <url-pattern>*.js</url-pattern>
+		    <url-pattern>*.css</url-pattern>
+		</filter-mapping>
+		
+		
+</web-app>
