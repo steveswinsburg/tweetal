@@ -1,5 +1,4 @@
 # tweetal
-=======
 
 Tweetal is a full featured Twitter portlet.
 
