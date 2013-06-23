@@ -22,11 +22,20 @@ This is currently being migrated from SVN and needs cleanup.
 TODO
 
 ### Configuration
-Starting with Tweetal 1.3.0, all deployments need to register an application with Twitter and provide the settings to the portlet. Simply fill out this form: http://twitter.com/oauth_clients/new
-Be sure to choose 'client' as the Application type, NOT 'browser'. Once you have filled out the form, add the key and secret supplied to your portlet using Config mode.
+Starting with Tweetal 1.3.0, all deployments need to register an application with Twitter and provide the settings
+to the portlet. Simply fill out this form:
+http://twitter.com/oauth_clients/new
 
-DO NOT reset these keys without updating the values in the portlet, as the integration will no longer function if they are out of sync (they are essentially your application's username and password).
-When user's link their account they will be prompted to enter a code into Tweetal, that will then be verified and their own access token and secret stored as preferences.
+Be sure to choose 'client' as the Application type, NOT 'browser'. 
+
+Once you have filled out the form, get the key and secret supplied by Twitter, and add them to your portlet using Config mode.
+
+DO NOT reset these keys without updating the values in the portlet, as the integration will no longer function
+if they are out of sync (they are essentially your application's username and password).
+
+Note that when user's link their account they will be prompted to enter a code into Tweetal, that will then be verified and their own access token and secret stored as preferences.
+
+=====
 
 ### Project Roadmap
 
