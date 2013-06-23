@@ -14,12 +14,13 @@ This is currently being migrated from SVN and needs cleanup.
 * Caching tweets on servlet to reduce traffic to Tweetal
 
 ### Developers
-Osama Alkadi
-Denny Denny
-Steve Swinsburg
+* Osama Alkadi
+* Denny Denny
+* Steve Swinsburg
 
 ### Installation
 
+TODO
 
 ### Configuration
 Starting with Tweetal 1.3.0, all deployments need to register an application with Twitter and provide the settings to the portlet. Simply fill out this form: http://twitter.com/oauth_clients/new
