@@ -1,8 +1,6 @@
 # tweetal
 
-Tweetal is a full featured Twitter portlet.
-
-This is currently being migrated from SVN and needs cleanup.
+A Twitter portlet for uPortal
 
 ### Features
 * Renders your Twitter feed as a portlet.
