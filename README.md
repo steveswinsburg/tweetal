@@ -5,12 +5,11 @@ Tweetal is a full featured Twitter portlet.
 This is currently being migrated from SVN and needs cleanup.
 
 ### Features
-* Renders your Twitter feed as a portlet
-* Rich AJAX interface, using JSON to communicate to servlet
-* Allows posting messages, replies, retweets and the deletion of messages
-* Uses OAuth to keep your credentials safe
-* Uses config page to set OAuth consumer key and secret which allow binary deployment
-* Caching tweets on servlet to reduce traffic to Tweetal
+* Renders your Twitter feed as a portlet.
+* Rich AJAX interface, using JSON to communicate to servlet.
+* Users can post tweets, replies, retweets and delete messages.
+* Built on OAuth to keep your credentials safe.
+* Leverages the portlet config mode to allow the administrator to set OAuth consumer key and secret.
 
 ### Developers
 * Osama Alkadi
@@ -19,21 +18,32 @@ This is currently being migrated from SVN and needs cleanup.
 
 ### Installation
 
-TODO
+Build the portlet:
+```
+mvn clean install
+```
+
+Deploy the portlet
+```
+cd UPORTAL-SRC dir
+ant deployPortletApp -DportletApp=/path/to/tweetal/target/tweetal-VERSION.war
+```
 
 ### Configuration
-Starting with Tweetal 1.3.0, all deployments need to register an application with Twitter and provide the settings
-to the portlet. Simply fill out this form:
+All deployments need to register an application with Twitter and provide the settings to the portlet. Simply fill out this form:
+
 http://twitter.com/oauth_clients/new
 
-Be sure to choose 'client' as the Application type, NOT 'browser'. 
+When asked for the application type, be sure to choose 'client', NOT 'browser'. 
 
-Once you have filled out the form, get the key and secret supplied by Twitter, and add them to your portlet using Config mode.
+Once you have filled out the form, get the key and secret supplied by Twitter, and add them to your portlet via the config view.
 
-DO NOT reset these keys without updating the values in the portlet, as the integration will no longer function
+DO NOT reset these keys in Twitter without updating the values in the portlet, as the integration will no longer function
 if they are out of sync (they are essentially your application's username and password).
 
-Note that when user's link their account they will be prompted to enter a code into Tweetal, that will then be verified and their own access token and secret stored as preferences.
+Note that when individual user's link their account they will be prompted to enter a code into Tweetal, that will then be verified and their own access token and secret stored as preferences.
+
+User's can unlink their account at any time.
 
 =====
 
